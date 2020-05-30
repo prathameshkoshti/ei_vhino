@@ -1,0 +1,53 @@
+.products-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+.philosophy img {
+    width: 100%;
+}
+
+.partner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 100%;
+}
+
+a.link {
+    text-decoration: none;
+    color: var(--burgundy);
+    position: relative;
+    left: calc(-150px - 1em);
+}
+
+a.link:after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    background-color: var(--burgundy);
+    height: 1px;
+    top: 50%;
+    transform: translate(1em, -50%);
+}
+
+button {
+    width: 200px;
+    height: 60px;
+    background: var(--burgundy);
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 720px) and (min-width: 320px) {
+    a.link:after {
+        content: none;
+    }
+    a.link {
+        left: initial;
+    }
+}

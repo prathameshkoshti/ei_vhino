@@ -1,0 +1,97 @@
+/* * {
+    border: 1px solid red !important
+} */
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 1.8em;
+    grid-gap: 10px;
+}
+
+.partners {
+    width: 100%;
+}
+
+.partners-grid {
+    max-width: calc(4 * 266px - 1px);
+    min-width: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+    grid-auto-rows: 164px;
+    background-color: #c4c4c4;
+    place-items: center;
+    justify-content: center;
+    margin-top: 1.8em;
+    grid-gap: 1px;
+}
+
+.product {
+    display: grid;
+    grid-template-rows: 286px 96px auto;
+    justify-items: center;
+    grid-gap: 10px;
+    position: relative;
+    max-width: 100%;
+    min-width: 220px;
+}
+
+.product-image {
+    display: flex;
+    align-items: center;
+}
+
+.products {
+    margin-top: 3.8em;
+}
+
+.like-button {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.like-button img {
+    width: 75%;
+}
+
+.philosophy {
+    display: flex;
+    justify-content: space-between;
+}
+
+.philosophy .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.promotions-section {
+    margin-left: calc(50% - 50vw + 1em);
+    margin-right: calc(50% - 50vw + 1em);
+}
+
+@media only screen and (max-width: 991px) {
+    .philosophy {
+        flex-direction: column;
+        align-items: center;
+    }
+    .philosophy .content {
+        margin-top: 1.5em;
+        order: 2;
+        align-items: center;
+    }
+    .philosophy .content .content-group {
+        text-align: center;
+    }
+    .philosophy  button {
+        margin-top: 2em;
+    }
+}
