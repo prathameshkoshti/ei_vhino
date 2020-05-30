@@ -34,6 +34,50 @@ a.link:after {
     transform: translate(1em, -50%);
 }
 
+.testimonials-collection {
+    background: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 90%
+}
+
+.opening-quote, .closing-quote {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    right: 8em;
+}
+
+.opening-quote {
+    right: initial;
+    left: 8em;
+    top: initial;
+    bottom: -50px;
+}
+
+.testimonial {
+    display: grid;
+    grid-template-columns: 130px 400px;
+    grid-template-rows: 150px 20px;
+    padding: 6em;
+    grid-column-gap: 3em;
+}
+
+.testimonial p {
+    color: var(--gray);
+}
+
+.customer-image {
+    grid-row: 1 / -1;  
+}
+
+.customer-image img {
+    width: 100%;
+}
+
 button {
     width: 200px;
     height: 60px;
@@ -43,11 +87,89 @@ button {
     border-radius: 5px;
 }
 
+.promotion-discount {
+    background: var(--burgundy);
+    display: inline-block;
+    padding: 0.2em 1em;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+.promotion-name {
+    font-size: 30px;
+    font-family: 'Martel', serif;
+    text-transform: uppercase;
+}
+
+.promotion-validity {
+    color: var(--gray);
+    position: absolute;
+    bottom: 1em;
+}
+.promotion-image img{
+    position: relative;
+    top: 30px
+}
+.promotion-image:after {
+    content: '';
+    width: 220px;
+    border-radius: 50%;
+    height: 220px;
+    left: -10px;
+    z-index: -4;
+    top: -30px;
+    background: url('../assets/images/promotions/2_bg.png');
+    position: absolute;
+}
+
+.promotion:nth-child(1) .promotion-image:after {
+    background: #96C8DD;
+    top: 40px
+}
+
+.promotion:nth-child(1) .promotion-image img {
+    top: 0px
+}
+
+@media only screen and (max-width: 991px) {
+    .opening-quote {
+        left: 4em;
+    } 
+    
+    .closing-quote {
+        right: 4em;
+    }
+}
+
 @media only screen and (max-width: 720px) and (min-width: 320px) {
     a.link:after {
         content: none;
     }
+
     a.link {
         left: initial;
+    }
+
+    .testimonial {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .testimonial .customer-image {
+        width: 130px;
+        margin-bottom: 2em;
+    }
+
+    .testimonial p {
+        margin-top: 2em;
+        order: 2;
+        text-align: center;
+    }
+
+    .testimonials-collection {
+        width: 100%;
     }
 }
