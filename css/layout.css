@@ -234,8 +234,4 @@ footer .copyright {
         grid-row: span 1;
         grid-column: span 1;
     }
-
-    .instagram-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr);
-    }
 }
