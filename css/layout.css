@@ -1,11 +1,56 @@
 /* * {
     border: 1px solid red !important
 } */
+body {
+    overflow-x: hidden;
+}
 
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 1em;
+}
+
+.instagram-section {
+    margin-top: 8em;
+}
+
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 150px);
+    grid-template-rows: repeat(2, 150px);
+    grid-gap: 1em;
+    place-items: center;
+    justify-content: center;
+    grid-auto-rows: 150px;
+}
+
+.insta-post img {
+    width: 100%;
+}
+
+.insta-post.big {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.insta-post.big:last-child {
+    grid-row: 1 / span 2;
+    grid-column: 5 / span 2;
+}
+
+.insta-info {
+    text-align: center;
+}
+
+.insta-handle {
+    font-size: 2em;
+    font-weight: 600;
+    font-family: Martel;
+}
+
+.insta-desc {
+    font-size: 0.7em;
 }
 
 .products-grid {
@@ -77,7 +122,7 @@
     display: flex;
     overflow-x: scroll;
     -ms-overflow-style: none;
-  scrollbar-width: none;
+    scrollbar-width: none;
 }
 
 .promotion {
@@ -95,6 +140,40 @@
     right: 1em;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.testimonials {
+    display: flex;
+}
+
+.pagination-controls {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    justify-content: space-between;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pagination span {
+    width: 2px;
+    height: 30px;
+    margin-bottom: 5px;
+    background: #CDCDCD;
+}
+
+.pagination span.active {
+    background: var(--burgundy);
+    height: 60px;
+}
+
+.controls .next {
+    margin-top: 10px;
 }
 
 footer {
@@ -149,5 +228,14 @@ footer .copyright {
     }
     .philosophy  button {
         margin-top: 2em;
+    }
+
+    .insta-post.big, .insta-post.big:last-child {
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+
+    .instagram-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr);
     }
 }
