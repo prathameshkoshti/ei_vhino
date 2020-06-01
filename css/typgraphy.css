@@ -21,6 +21,10 @@ strong, .strong {
     font-size: 1.8em;
 }
 
+strong.phone-number {
+    color: var(--burgundy)
+}
+
 .product-name {
     font-size: 1.2em;
     text-align: center;
