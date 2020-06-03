@@ -24,6 +24,19 @@ a.link {
     left: calc(-150px - 1em);
 }
 
+a.link.nav-link, a.link.sidebar-link, a.link.footer-link {
+    left: 0;
+    color: var(--black)
+}
+
+a.link.nav-link:after, a.link.sidebar-link:after, a.link.footer-link:after {
+    content: none;
+}
+
+a.link.footer-link {
+    color: white;
+}
+
 a.link:after {
     content: '';
     position: absolute;

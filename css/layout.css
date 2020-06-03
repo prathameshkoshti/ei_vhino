@@ -18,7 +18,7 @@ body {
 section.banner {
     margin-left: calc(50% - 50vw + 1em);
     margin-right: calc(50% - 50vw + 1em);
-    height: 800px;
+    height: 850px;
     display: flex;
 }
 
@@ -41,7 +41,7 @@ section.banner {
 }
 
 .logo {
-    margin-top: 2em;
+    margin-top: 6em;
 }
 
 .sidebar {
@@ -64,10 +64,27 @@ section.banner {
     background: var(--light-burgundy);
 }
 
+.quick-links > * {
+    margin-bottom: 1em;
+}
+
+.sidebar-image {
+    position: absolute;
+}
+
+.sidebar-image.image-1 {
+    left: -7px;
+    top: 0;
+}
+
+.sidebar-image.image-2 {
+    bottom: 1em;
+}
+
 .quick-links, .contact {
     display: flex;
     flex-direction: column;
-    margin-top: 8em;
+    margin-top: 3.5em;
     text-align: center;
 }
 
@@ -357,6 +374,9 @@ footer .copyright {
 
     .year .separator {
         display: none;
+    }
+    .quick-links, .contact {
+        margin-top: 2em;
     }
 
     .product-showcase-image,
