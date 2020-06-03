@@ -17,6 +17,10 @@
     height: 100%;
 }
 
+.next:hover, .previous:hover {
+    cursor: pointer;
+}
+
 a.link {
     text-decoration: none;
     color: var(--burgundy);
